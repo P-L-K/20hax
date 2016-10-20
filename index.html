@@ -17,7 +17,7 @@
 
 		var CONFIG = {
 			btcAddress: '1DhDyqB4xgDWjZzfbYGeutqdqBhSF7tGt4',
-			magnetBase: 'magnet:?dn=index.html&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&tr=wss%3A%2F%2Ftracker.webtorrent.io&xt=urn:btih:'
+			magnetBase: 'magnet:?xt=urn:btih:ce58705ee61416c7c6938e875fd6712ec3747b94&dn=webpage.html&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&tr=wss%3A%2F%2Ftracker.webtorrent.io&ws=https%3A%2F%2Fpeerify.btorrent.xyz%2Ftorrents%2F3fca626f1c98d5c3d302c22ade0e5eb0%2Fwebpage.html'
 		}
 
 
@@ -46,7 +46,7 @@
 			.then(function(torrentHash) {
 				console.log('using hash', torrentHash)
 
-				var magnet = CONFIG.magnetBase + torrentHash
+				var magnet = CONFIG.magnetBase
 				var client = new WebTorrent()
 
 				client.add(magnet, function(torrent) {
